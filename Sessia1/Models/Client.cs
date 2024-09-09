@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Avalonia.Media.Imaging;
+using System;
 using System.Collections.Generic;
 
 namespace Sessia1.Models;
@@ -24,6 +25,7 @@ public partial class Client
     public char Gendercode { get; set; }
 
     public string? Photopath { get; set; }
+    public Bitmap? Photo => Photopath != null ? new Bitmap ($@"assets\\{Photopath}") : null!;
 
     public string? Documents { get; set; }
 
