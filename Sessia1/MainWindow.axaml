@@ -31,7 +31,7 @@
 				<DataTemplate>
 					<Border>
 						<StackPanel Orientation="Vertical" Spacing="10">
-							<Grid ColumnDefinitions="20,120,120,170,78,150,160,140,70,50,200,*" ShowGridLines="True" Height="50">
+							<Grid ColumnDefinitions="40,120,120,170,78,150,160,140,70,50,200,*" ShowGridLines="False" Height="50">
 								<TextBlock Grid.Column="0" Text="{Binding Id}"/>
 								<TextBlock Grid.Column="1" Text="{Binding Firstname}"/>
 								<TextBlock Grid.Column="2" Text="{Binding Lastname}"/>
