@@ -14,7 +14,7 @@ public partial class Client
 
     public string? Patronymic { get; set; }
 
-    public DateOnly? Birthday { get; set; }
+    public DateTime Birthday { get; set; }
 
     public DateTime Registrationdate { get; set; }
 
@@ -25,7 +25,7 @@ public partial class Client
     public char Gendercode { get; set; }
 
     public string? Photopath { get; set; }
-    public Bitmap? Photo => Photopath != null ? new Bitmap ($@"assets\\{Photopath}") : null!;
+    public Bitmap? Photo => Photopath != null ? new Bitmap ($@"C:\Users\prdb\source\repos\Sessia1\Sessia1\assets\\{Photopath}") : null!;
 
     public string? Documents { get; set; }
 

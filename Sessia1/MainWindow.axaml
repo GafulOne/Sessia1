@@ -2,7 +2,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450" WindowState="Maximized"
         x:Class="Sessia1.MainWindow"
 		x:CompileBindings="False"
         Title="Sessia1">
@@ -21,9 +21,11 @@
 					<ComboBoxItem Content="Женский"></ComboBoxItem>
 					<ComboBoxItem Content="Все"></ComboBoxItem>
 				</ComboBox>
-				<TextBox
-					Watermark="Поиск">
-				</TextBox>
+				<CheckBox
+					Content="ДР"
+					Name="birthdayCheck">
+				</CheckBox>
+				<AutoCompleteBox x:Name="SearchTextBox" FilterMode="StartsWith" TextChanged="OnSearchTextChanged" />
 			</DockPanel>		
 		</StackPanel>
 		<ListBox Name="ClientsListBox" Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Auto">
@@ -31,17 +33,17 @@
 				<DataTemplate>
 					<Border>
 						<StackPanel Orientation="Vertical" Spacing="10">
-							<Grid ColumnDefinitions="40,120,120,170,78,150,160,140,70,50,200,*" ShowGridLines="False" Height="50">
+							<Grid ColumnDefinitions="40,*,*,*,*,*,150,150,150,100,*,*" ShowGridLines="False" Height="70">
 								<TextBlock Grid.Column="0" Text="{Binding Id}"/>
-								<TextBlock Grid.Column="1" Text="{Binding Firstname}"/>
-								<TextBlock Grid.Column="2" Text="{Binding Lastname}"/>
-								<TextBlock Grid.Column="3" Text="{Binding Patronymic}"/>
-								<TextBlock Grid.Column="4" Text="{Binding Birthday}"/>
-								<TextBlock Grid.Column="5" Text="{Binding Registrationdate}"/>
-								<TextBlock Grid.Column="6" Text="{Binding Email}"/>
-								<TextBlock Grid.Column="7" Text="{Binding Phone}"/>
-								<TextBlock Grid.Column="8" Text="{Binding Gendercode}"/>
-								<Image Grid.Column="9" Source="{Binding Photo}"/>
+								<TextBlock Grid.Column="2" Text="{Binding Firstname}"/>
+								<TextBlock Grid.Column="3" Text="{Binding Lastname}"/>
+								<TextBlock Grid.Column="4" Text="{Binding Patronymic}"/>
+								<TextBlock Grid.Column="5" Text="{Binding Birthday}"/>
+								<TextBlock Grid.Column="6" Text="{Binding Registrationdate}"/>
+								<TextBlock Grid.Column="7" Text="{Binding Email}"/>
+								<TextBlock Grid.Column="8" Text="{Binding Phone}"/>
+								<TextBlock Grid.Column="9" Text="{Binding Gendercode}"/>
+								<Image Grid.Column="1" Source="{Binding Photo}"/>
 							</Grid>
 						</StackPanel>
 					</Border>
